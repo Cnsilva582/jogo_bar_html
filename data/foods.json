@@ -1,0 +1,96 @@
+{
+    "menu":[
+    {
+    "nome": "Bruscheta Tradicional",
+    "categoria": "Entrada",
+    "descricao": "Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.",
+    "preco": "R$ 18,00",
+    "imagem": "img/logot.png"
+    
+    },
+
+    {
+    "nome": "Suco Natural de Laranja",
+    "categoria": "Bebida",
+    "descricao": "Feito na hora, 100% fruta, sem adição de açúcar",
+    "preco": "R$ 9,00"
+    },
+
+    {
+     "nome": "Lasanha á Bolonhesa",
+     "categoria": "Prato Principal",
+     "descricao": "Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.",
+     "preco": "R$ 42,00"   
+    },
+
+    {
+    "nome": "Bruscheta Tradicional",
+    "categoria": "Entrada",
+    "descricao": "Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.",
+    "preco": "R$ 18,00",
+    "imagem": "img/logot.png"
+    
+    },
+
+    {
+    "nome": "Suco Natural de Laranja",
+    "categoria": "Bebida",
+    "descricao": "Feito na hora, 100% fruta, sem adição de açúcar",
+    "preco": "R$ 9,00"
+    },
+
+    
+    {
+     "nome": "Lasanha á Bolonhesa",
+     "categoria": "Prato Principal",
+     "descricao": "Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.",
+     "preco": "R$ 42,00"   
+    },
+
+    {
+    "nome": "Bruscheta Tradicional",
+    "categoria": "Entrada",
+    "descricao": "Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.",
+    "preco": "R$ 18,00",
+    "imagem": "img/logot.png"
+    
+    },
+
+    {
+    "nome": "Suco Natural de Laranja",
+    "categoria": "Bebida",
+    "descricao": "Feito na hora, 100% fruta, sem adição de açúcar",
+    "preco": "R$ 9,00"
+    },
+
+    {
+     "nome": "Lasanha á Bolonhesa",
+     "categoria": "Prato Principal",
+     "descricao": "Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.",
+     "preco": "R$ 42,00"   
+    },
+
+    {
+    "nome": "Bruscheta Tradicional",
+    "categoria": "Entrada",
+    "descricao": "Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.",
+    "preco": "R$ 18,00",
+    "imagem": "img/logot.png"
+    
+    },
+
+    {
+    "nome": "Suco Natural de Laranja",
+    "categoria": "Bebida",
+    "descricao": "Feito na hora, 100% fruta, sem adição de açúcar",
+    "preco": "R$ 9,00"
+    },
+
+    {
+     "nome": "Lasanha á Bolonhesa",
+     "categoria": "Prato Principal",
+     "descricao": "Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.",
+     "preco": "R$ 42,00"   
+    }
+    ]
+}

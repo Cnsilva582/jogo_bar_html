@@ -1,0 +1,186 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #ffffff;
+    color: #040404;
+    line-height: 1.6;
+}
+
+header {
+    background: #000000;
+    color: #f2fa00;
+    padding: 0px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #585dfa;
+    color: #fff;
+}
+/* Logo */
+header img {
+    height: 150px;    /* define a altura do logo */
+    width: auto;     /* mantém a proporção */
+}
+
+
+
+nav a:hover {
+    background-color: #585dfa;
+    color: #fff;
+}
+
+main {
+    padding: 28px 20px;
+}
+
+/* Seção de boas-vindas */
+#bem-vindo {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#bem-vindo h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #1702ff;
+}
+
+#bem-vindo p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2b2a2a;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+#galeria {
+    margin: 18px 0 22px 0;
+}
+
+#galeria h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+
+#promo-video {
+    margin-top: 18px;
+    padding: 16px 0;
+}
+
+#promo-video h2 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+footer p{
+    margin: 5px 0; /* espaço entre parágrafos */
+    font-size: 14px
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 18px 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(217,119,6,0.2);
+}
+footer img{
+   width: 30px; 
+    height: 30px;
+    margin: 0 5px; 
+    vertical-align: middle; 
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+footer img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    #bem-vindo h2 {
+        font-size: 1.5rem;
+    }
+
+    #bem-vindo p {
+        font-size: 1rem;
+    }
+
+    .video-container video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}

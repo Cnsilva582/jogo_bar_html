@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/styleJC.css">
+  <title>Jogos</title>
+</head>
+<body>
+  <header>
+    <img src="./img/logot.png" alt="">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu_foods.html">Cardápio</a>
+      <a href="menu_games.html">Jogos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <h1>🍽️ Jogos</h1>
+  <ul id="Jogos"></ul>
+
+  <script>
+    fetch("../data/games.json")
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById("Jogos");
+        data.Jogos.forEach(item => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <img src="../output/img/logot.png" alt="${item.nome}">
+            <h3>${item.nome}</h3>
+            <p>${item.jogadores} - ${item.Objetivo}</p>
+            <em>${item.Regras}</em>
+          `;
+          lista.appendChild(li);
+        });
+      });
+  </script>
+
+  <!--Rodape-->
+    <footer>
+        <p>© 2025/2 Tabuleiro & Cerveja -  Rua Python, 2 - Aberto de Sex a Dom, 18h as 02h</p>
+        <p>Siga nossa Pagina</p>
+        <img src="./img/instagram.png" alt="">
+        <img src="./img/youtube.png" alt="">
+        <p>Amanda e Cassiana</p>
+    </footer>
+</body>
+</html>

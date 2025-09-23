@@ -1,0 +1,68 @@
+{
+  "Jogos": [
+    {
+      "nome": "Xadrez",
+      "jogadores": "2",
+      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
+      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
+    },
+    {
+      "nome": "Banco Imobiliário",
+      "jogadores": "2 a 6",
+      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
+      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
+    },
+    {
+      "nome": "Catan",
+      "jogadores": "3 a 4 (expansões até 6)",
+      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
+      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
+    },
+
+    {
+      "nome": "Xadrez",
+      "jogadores": "2",
+      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
+      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
+    },
+    {
+      "nome": "Banco Imobiliário",
+      "jogadores": "2 a 6",
+      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
+      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
+    },
+    {
+      "nome": "Catan",
+      "jogadores": "3 a 4 (expansões até 6)",
+      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
+      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
+    },
+
+
+    {
+      "nome": "Xadrez",
+      "jogadores": "2",
+      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
+      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
+    },
+    {
+      "nome": "Banco Imobiliário",
+      "jogadores": "2 a 6",
+      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
+      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
+    },
+    {
+      "nome": "Catan",
+      "jogadores": "3 a 4 (expansões até 6)",
+      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
+      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
+    },
+    
+     {
+      "nome": "Banco Imobiliário",
+      "jogadores": "2 a 6",
+      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
+      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
+    }
+  ]
+}
