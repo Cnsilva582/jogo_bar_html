@@ -1,68 +1,45 @@
-{
-  "Jogos": [
-    {
-      "nome": "Xadrez",
-      "jogadores": "2",
-      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
-      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
-    },
-    {
-      "nome": "Banco Imobiliário",
-      "jogadores": "2 a 6",
-      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
-      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
-    },
-    {
-      "nome": "Catan",
-      "jogadores": "3 a 4 (expansões até 6)",
-      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
-      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
-    },
-
-    {
-      "nome": "Xadrez",
-      "jogadores": "2",
-      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
-      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
-    },
-    {
-      "nome": "Banco Imobiliário",
-      "jogadores": "2 a 6",
-      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
-      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
-    },
-    {
-      "nome": "Catan",
-      "jogadores": "3 a 4 (expansões até 6)",
-      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
-      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
-    },
-
-
-    {
-      "nome": "Xadrez",
-      "jogadores": "2",
-      "Objetivo": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
-      "Regras": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir."
-    },
-    {
-      "nome": "Banco Imobiliário",
-      "jogadores": "2 a 6",
-      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
-      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
-    },
-    {
-      "nome": "Catan",
-      "jogadores": "3 a 4 (expansões até 6)",
-      "Objetivo": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
-      "Regras": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os jogadores coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial."
-    },
-    
-     {
-      "nome": "Banco Imobiliário",
-      "jogadores": "2 a 6",
-      "Objetivo": "Acumular mais riqueza que os outros, levando-os à falência.",
-      "Regras": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro."
-    }
-  ]
-}
+[
+  {
+    "name": "Xadrez",
+    "players": "2",
+    "type": "Dar xeque-mate no rei do adversário, impedindo-o de se mover.",
+    "description": "Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir.",
+    "image": "style/img/xadrez.png"
+  },
+  {
+    "name": "Banco Imobiliário",
+    "players": "2 a 6",
+    "type": "Acumular mais riqueza que os outros, levando-os à falência.",
+    "description": "Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro.",
+    "image": "style/img/banco.png"
+  },
+  {
+    "name": "Catan",
+    "players": "3 a 4 (expansões até 6)",
+    "type": "Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.",
+    "description": "O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os players coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial.",
+    "image": "style/img/catan.png"
+  },
+  {
+    "name": "Damas",
+    "players": "2",
+    "type": "Capturar todas as peças do adversário ou deixá-lo sem movimentos possíveis.",
+    "description": "Cada jogador move suas peças na diagonal, uma casa por vez. Captura-se a peça do adversário pulando por cima dela. Peças que chegam à última linha se tornam damas, podendo se mover para trás.",
+    "image": "style/img/damas.png",
+    "visivel": false
+  },
+  {
+    "name": "Jogo da Vida",
+    "players": "2 a 6",
+    "type": "Simular a vida, acumulando riqueza e experiências, e chegar ao final do jogo com mais sucesso.",
+    "description": "Os players giram a roleta e avançam pelo tabuleiro, passando por etapas da vida como carreira, casamento, filhos e investimentos. Ganha quem tiver mais dinheiro e conquistas ao final do jogo.",
+    "image": "style/img/jogodavida.png"
+  },
+  {
+    "name": "Jenga",
+    "players": "1 ou mais",
+    "type": "Retirar blocos da torre e reposicioná-los no topo sem derrubar a torre.",
+    "description": "Cada jogador remove um bloco de sua escolha (exceto o topo) e coloca no topo da torre. O jogo continua em turnos até a torre cair. O jogador que derrubar a torre perde.",
+    "image": "style/img/jenga.png"
+  }
+]

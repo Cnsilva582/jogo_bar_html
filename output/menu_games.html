@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="../style/styleJC.css">
-  <title>Jogos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Disponíveis - Tabuleiro & Cerveja</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-  <header>
-    <img src="./img/logot.png" alt="">
+<header>
+    <h1>Jogos Disponíveis</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="menu_foods.html">Cardápio</a>
-      <a href="menu_games.html">Jogos</a>
-      <a href="contato.html">Contato</a>
+        <a href="index.html">Home</a>
+        <a href="menu_foods.html">Cardápio</a>
+        <a href="menu_games.html">Jogos</a>
     </nav>
-  </header>
+</header>
+<div class="cards-container">
 
-  <h1>🍽️ Jogos</h1>
-  <ul id="Jogos"></ul>
+    <div class="card">
+        <img src="../style/img/xadrez.png" alt="Xadrez">
+        <h2>Xadrez</h2>
+        <p>Cada peça tem um movimento específico (torre em linha reta, bispo na diagonal, cavalo em L etc.). O rei nunca pode ficar em xeque. Vence quem der xeque-mate ou se o adversário desistir.</p>
+        <p><strong>Tipo:</strong> Dar xeque-mate no rei do adversário, impedindo-o de se mover.</p>
+        <p><strong>Quantidade de jogadores:</strong> 2</p>
+    </div>
 
-  <script>
-    fetch("../data/games.json")
-      .then(response => response.json())
-      .then(data => {
-        const lista = document.getElementById("Jogos");
-        data.Jogos.forEach(item => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <img src="../output/img/logot.png" alt="${item.nome}">
-            <h3>${item.nome}</h3>
-            <p>${item.jogadores} - ${item.Objetivo}</p>
-            <em>${item.Regras}</em>
-          `;
-          lista.appendChild(li);
-        });
-      });
-  </script>
+    <div class="card">
+        <img src="../style/img/banco.png" alt="Banco Imobiliário">
+        <h2>Banco Imobiliário</h2>
+        <p>Jogadores rolam dados para andar no tabuleiro. Ao cair em propriedades, você pode comprá-las e cobrar aluguel. Quem ficar sem dinheiro está fora. Ganha quem for o último jogador com dinheiro.</p>
+        <p><strong>Tipo:</strong> Acumular mais riqueza que os outros, levando-os à falência.</p>
+        <p><strong>Quantidade de jogadores:</strong> 2 a 6</p>
+    </div>
 
-  <!--Rodape-->
-    <footer>
-        <p>© 2025/2 Tabuleiro & Cerveja -  Rua Python, 2 - Aberto de Sex a Dom, 18h as 02h</p>
-        <p>Siga nossa Pagina</p>
-        <img src="./img/instagram.png" alt="">
-        <img src="./img/youtube.png" alt="">
-        <p>Amanda e Cassiana</p>
-    </footer>
+    <div class="card">
+        <img src="../style/img/catan.png" alt="Catan">
+        <h2>Catan</h2>
+        <p>O tabuleiro é formado por hexágonos que geram recursos (madeira, trigo, pedra etc.). A cada turno, os players coletam recursos e fazem trocas. Recursos são usados para expandir construções e ganhar pontos. Estratégia de trocas e posicionamento é essencial.</p>
+        <p><strong>Tipo:</strong> Construir assentamentos, estradas e cidades até atingir 10 pontos de vitória.</p>
+        <p><strong>Quantidade de jogadores:</strong> 3 a 4 (expansões até 6)</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/damas.png" alt="Damas">
+        <h2>Damas</h2>
+        <p>Cada jogador move suas peças na diagonal, uma casa por vez. Captura-se a peça do adversário pulando por cima dela. Peças que chegam à última linha se tornam damas, podendo se mover para trás.</p>
+        <p><strong>Tipo:</strong> Capturar todas as peças do adversário ou deixá-lo sem movimentos possíveis.</p>
+        <p><strong>Quantidade de jogadores:</strong> 2</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/jogodavida.png" alt="Jogo da Vida">
+        <h2>Jogo da Vida</h2>
+        <p>Os players giram a roleta e avançam pelo tabuleiro, passando por etapas da vida como carreira, casamento, filhos e investimentos. Ganha quem tiver mais dinheiro e conquistas ao final do jogo.</p>
+        <p><strong>Tipo:</strong> Simular a vida, acumulando riqueza e experiências, e chegar ao final do jogo com mais sucesso.</p>
+        <p><strong>Quantidade de jogadores:</strong> 2 a 6</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/jenga.png" alt="Jenga">
+        <h2>Jenga</h2>
+        <p>Cada jogador remove um bloco de sua escolha (exceto o topo) e coloca no topo da torre. O jogo continua em turnos até a torre cair. O jogador que derrubar a torre perde.</p>
+        <p><strong>Tipo:</strong> Retirar blocos da torre e reposicioná-los no topo sem derrubar a torre.</p>
+        <p><strong>Quantidade de jogadores:</strong> 1 ou mais</p>
+    </div>
+
+</div>
+<footer>
+    <p>© 2025 Tabuleiro & Cerveja</p>
+</footer>
 </body>
 </html>

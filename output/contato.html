@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../style/stylec.css">
-    <title>Tabuleiro & Cerveja</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>Contato</title>
 </head>
 <body>
-    <header>
-        <img src="./img/logot.png" alt="">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu_foods.html">Cardapio</a>
-            <a href="menu_games.html">Jogos</a>
-            <a href="contato.html">contato</a>
-        </nav>
-    </header>
-    <section class="contato-section">
-        <div class="contato">
-        <h2>Para entrar em Contato conosco,<br>você pode utilizar  os seguintes canais:</h2>
-        <img src="./img/telefone-fixo.png" alt="">
-        <p>Telefone:(30)2472-0990</p>
+  <header>
+    <img src="./img/logot.png" alt="">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu_foods.html">Cardápio</a>
+      <a href="menu_games.html">Jogos</a>
+      <a href="jogos.html">Meus Jogos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-        <img src="./img/gmail.png" alt="">
-        <a href=""> E-mail:tabuleira&cerveja@gamil.com</a>
+  <h1>📩 Contato</h1>
+  <!-- Formulário -->
+  <form onsubmit="enviarMensagem(event)">
+    <label for="mensagem">Digite sua mensagem:</label><br>
+    <textarea id="mensagem" required></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <h2>📜 Mensagens</h2>
+  <ul id="lista-mensagens"></ul>
+  <button onclick="limparMensagens()">🗑️ Apagar todas</button>
 
-        <p>Endereço: rua Python, 2 - Bairro - Pytholandia-PY</p>
-        <h2>Horario de Atendimento</h2>
-        <img src="./img/calendario.png" alt="">
-        <h3>Bar</h3>
-        <ul>
-        <li>Terça a Quinta: 18:30 ás 00:00</li>
-       <li>Sexta a Domingo: 18:30 ás 03:00</li>
-       </ul>
+  <script>
+    // Envia e salva mensagem no localStorage
+    function enviarMensagem(event) {
+      event.preventDefault();
+      let mensagem = document.getElementById("mensagem").value.trim();
+      if (mensagem === "") return;
 
-        <h3>Salas de Jogos</h3>
-        <ul>
-        <li><p>Sexta a Domingo: 18:30 ás 03:00</p></li>
-        </ul>
-        <p>Estamos à disposição para esclarecer dúvidas, receber sugestões e atender às suas solicitações dentro do horário de funcionamento.</p>
-    </div>
-    </section>
-    <footer>
-        <p>© 2025/2 Tabuleiro & Cerveja -  Rua Python, 2 - Aberto de Sex a Dom, 18h as 02h</p>
-        <p>Siga nossa Pagina</p>
-        <img src="./img/instagram.png" alt="">
-        <img src="./img/youtube.png" alt="">
-        <p>Amanda e Cassiana</p>
-    </footer>
+      let mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
+      mensagens.push(mensagem);
+      localStorage.setItem("mensagens", JSON.stringify(mensagens));
+
+      document.getElementById("mensagem").value = "";
+      carregarMensagens();
+    }
+
+    // Carrega mensagens na lista
+    function carregarMensagens() {
+      let mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
+      let lista = document.getElementById("lista-mensagens");
+      lista.innerHTML = "";
+
+      if (mensagens.length === 0) {
+        lista.innerHTML = "<li>Nenhuma mensagem ainda.</li>";
+        return;
+      }
+
+      mensagens.forEach((m, i) => {
+        let li = document.createElement("li");
+        li.textContent = m + " ";
+
+        // Botão para excluir individualmente
+        let btn = document.createElement("button");
+        btn.textContent = "Excluir";
+        btn.onclick = () => apagarMensagem(i);
+
+        li.appendChild(btn);
+        lista.appendChild(li);
+      });
+    }
+
+    // Apaga mensagem específica
+    function apagarMensagem(index) {
+      let mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
+      mensagens.splice(index, 1);
+      localStorage.setItem("mensagens", JSON.stringify(mensagens));
+      carregarMensagens();
+    }
+
+    // Apaga todas as mensagens
+    function limparMensagens() {
+      localStorage.removeItem("mensagens");
+      carregarMensagens();
+    }
+
+    // Carrega ao abrir a página
+    carregarMensagens();
+  </script>
+
+  <footer>
+    <p>© 2025/2 Tabuleiro & Cerveja</p>
+    
+  </footer>
 </body>
 </html>

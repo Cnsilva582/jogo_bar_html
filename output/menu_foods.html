@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="../style/styleJC.css">
-  <title>Cardápio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Comidas - Tabuleiro & Cerveja</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-  <header>
-    <img src="./img/logot.png" alt="">
+<header>
+    <h1>Cardápio de Comidas</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="menu_foods.html">Cardápio</a>
-      <a href="menu_games.html">Jogos</a>
-      <a href="contato.html">Contato</a>
+        <a href="index.html">Home</a>
+        <a href="menu_foods.html">Cardápio</a>
+        <a href="menu_games.html">Jogos</a>
     </nav>
-  </header>
+</header>
+<div class="cards-container">
 
-  <h1>🍽️ Cardápio</h1>
-  <ul id="lista-cardapio"></ul>
+    <div class="card">
+        <img src="../style/img/Brus.png" alt="Bruscheta Tradicional">
+        <h2>Bruscheta Tradicional</h2>
+        <p>Entrada</p>
+        <p><strong>Ingredientes:</strong> Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.</p>
+        <p><strong>Preço:</strong> R$  18,00</p>
+    </div>
 
-  <script>
-    fetch("../data/foods.json")
-      .then(response => response.json())
-      .then(data => {
-        const lista = document.getElementById("lista-cardapio");
-        data.menu.forEach(item => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <img src="../output/img/logot.png" alt="${item.nome}">
-            <h3>${item.nome}</h3>
-            <p>${item.categoria} - ${item.preco}</p>
-            <em>${item.descricao}</em>
-          `;
-          lista.appendChild(li);
-        });
-      });
-  </script>
+    <div class="card">
+        <img src="../style/img/suco.png" alt="Suco Natural de Laranja">
+        <h2>Suco Natural de Laranja</h2>
+        <p>Bebida</p>
+        <p><strong>Ingredientes:</strong> Feito na hora, 100% fruta, sem adição de açúcar</p>
+        <p><strong>Preço:</strong> R$  9,00</p>
+    </div>
 
-  <!--Rodape-->
-    <footer>
-        <p>© 2025/2 Tabuleiro & Cerveja -  Rua Python, 2 - Aberto de Sex a Dom, 18h as 02h</p>
-        <p>Siga nossa Pagina</p>
-        <img src="./img/instagram.png" alt="">
-        <img src="./img/youtube.png" alt="">
-        <p>Amanda e Cassiana</p>
-    </footer>
+    <div class="card">
+        <img src="../style/img/lasanha.png" alt="Lasanha á Bolonhesa">
+        <h2>Lasanha á Bolonhesa</h2>
+        <p>Prato Principal</p>
+        <p><strong>Ingredientes:</strong> Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.</p>
+        <p><strong>Preço:</strong> R$  42,00</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/dados.png" alt="Dados Crocantes">
+        <h2>Dados Crocantes</h2>
+        <p>Entrada</p>
+        <p><strong>Ingredientes:</strong> Cubinhos de queijo empanados, dourados e crocantes, servidos com molho de mostarda e mel.</p>
+        <p><strong>Preço:</strong> R$  28,00</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/elixir.png" alt="Elixir do Mestre">
+        <h2>Elixir do Mestre</h2>
+        <p>Bebida</p>
+        <p><strong>Ingredientes:</strong> Drink refrescante com gin, xarope de frutas vermelhas, limão siciliano e um toque de alecrim. Pode ser servido também na versão sem álcool.</p>
+        <p><strong>Preço:</strong> R$  32,00</p>
+    </div>
+
+    <div class="card">
+        <img src="../style/img/tabSup.png" alt="Tabuleiro Supremo">
+        <h2>Tabuleiro Supremo</h2>
+        <p>Prato Principal</p>
+        <p><strong>Ingredientes:</strong> Hambúrguer artesanal de 180g com queijo cheddar, cebola caramelizada, bacon crocante e molho especial da casa, acompanhado de batatas rústicas.</p>
+        <p><strong>Preço:</strong> R$  48,00</p>
+    </div>
+
+</div>
+<footer>
+    <p>© 2025 Tabuleiro & Cerveja</p>
+</footer>
 </body>
 </html>
