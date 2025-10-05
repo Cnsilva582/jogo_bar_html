@@ -7,27 +7,27 @@
 </head>
 <body>
   <header>
-    <img src="./img/logot.png" alt="">
+    <img src="../style/img/logot.png" alt="" style="height: 90px; width: auto;">
     <nav>
       <a href="index.html">Home</a>
       <a href="menu_foods.html">Cardápio</a>
       <a href="menu_games.html">Jogos</a>
-      <a href="jogos.html">Meus Jogos</a>
-      <a href="contato.html">Contato</a>
+      <a href="contact.html">Contato</a>
     </nav>
   </header>
-
-  <h1>📩 Contato</h1>
-  <!-- Formulário -->
-  <form onsubmit="enviarMensagem(event)">
-    <label for="mensagem">Digite sua mensagem:</label><br>
-    <textarea id="mensagem" required></textarea><br>
-    <button type="submit">Enviar</button>
-  </form>
-  <h2>📜 Mensagens</h2>
-  <ul id="lista-mensagens"></ul>
-  <button onclick="limparMensagens()">🗑️ Apagar todas</button>
-
+    <div class="ajustar_footer" > 
+    <div class="centralizar">
+      <h1 >Contato</h1>
+      <form onsubmit="enviarMensagem(event)">
+        <label for="mensagem">Digite sua mensagem:</label><br>
+        <textarea id="mensagem" required></textarea><br>
+        <button type="submit">Enviar</button>
+      </form>
+      <h2>Mensagens</h2>
+      <ul id="lista-mensagens"></ul>
+      <button onclick="limparMensagens()">Apagar todas</button>
+    </div>
+  </div>
   <script>
     // Envia e salva mensagem no localStorage
     function enviarMensagem(event) {

@@ -13,8 +13,12 @@
         <a href="index.html">Home</a>
         <a href="menu_foods.html">Cardápio</a>
         <a href="menu_games.html">Jogos</a>
+        <a href="contact.html">Contato</a>
     </nav>
 </header>
+<div class="mensagem-comanda">
+    <p><strong>A comanda segue ao final dessa página!</strong></p>
+</div>
 <div class="cards-container">
 
     <div class="card">
@@ -23,6 +27,7 @@
         <p>Entrada</p>
         <p><strong>Ingredientes:</strong> Pão italiano crocante com tomates frescos, manjericão e azeite de oliva.</p>
         <p><strong>Preço:</strong> R$  18,00</p>
+        <button onclick="adicionarComanda('Bruscheta Tradicional',  18,00)">Adicionar à Comanda</button>
     </div>
 
     <div class="card">
@@ -31,6 +36,7 @@
         <p>Bebida</p>
         <p><strong>Ingredientes:</strong> Feito na hora, 100% fruta, sem adição de açúcar</p>
         <p><strong>Preço:</strong> R$  9,00</p>
+        <button onclick="adicionarComanda('Suco Natural de Laranja',  9,00)">Adicionar à Comanda</button>
     </div>
 
     <div class="card">
@@ -39,6 +45,7 @@
         <p>Prato Principal</p>
         <p><strong>Ingredientes:</strong> Massa fresca em camadas, molho bolonhesa caseiro, creme bechamel e queijo gratinado.</p>
         <p><strong>Preço:</strong> R$  42,00</p>
+        <button onclick="adicionarComanda('Lasanha á Bolonhesa',  42,00)">Adicionar à Comanda</button>
     </div>
 
     <div class="card">
@@ -47,6 +54,7 @@
         <p>Entrada</p>
         <p><strong>Ingredientes:</strong> Cubinhos de queijo empanados, dourados e crocantes, servidos com molho de mostarda e mel.</p>
         <p><strong>Preço:</strong> R$  28,00</p>
+        <button onclick="adicionarComanda('Dados Crocantes',  28,00)">Adicionar à Comanda</button>
     </div>
 
     <div class="card">
@@ -55,6 +63,7 @@
         <p>Bebida</p>
         <p><strong>Ingredientes:</strong> Drink refrescante com gin, xarope de frutas vermelhas, limão siciliano e um toque de alecrim. Pode ser servido também na versão sem álcool.</p>
         <p><strong>Preço:</strong> R$  32,00</p>
+        <button onclick="adicionarComanda('Elixir do Mestre',  32,00)">Adicionar à Comanda</button>
     </div>
 
     <div class="card">
@@ -63,11 +72,75 @@
         <p>Prato Principal</p>
         <p><strong>Ingredientes:</strong> Hambúrguer artesanal de 180g com queijo cheddar, cebola caramelizada, bacon crocante e molho especial da casa, acompanhado de batatas rústicas.</p>
         <p><strong>Preço:</strong> R$  48,00</p>
+        <button onclick="adicionarComanda('Tabuleiro Supremo',  48,00)">Adicionar à Comanda</button>
     </div>
 
 </div>
-<footer>
-    <p>© 2025 Tabuleiro & Cerveja</p>
-</footer>
+
+<section>
+    <div class="centralizar_comanda">
+        <h2> Sua Comanda</h2>
+            <ul id="comanda-lista"></ul>
+                <p><strong>Total:</strong> R$ <span id="comanda-total">0.00</span></p>
+            <button onclick="limparComanda()"> Limpar Comanda</button>
+        <footer>
+            <p>© 2025 Tabuleiro & Cerveja</p>
+        </footer>
+    </div>
+
+<script>
+let comanda = JSON.parse(localStorage.getItem("comanda")) || [];
+
+function salvarComanda() {
+    localStorage.setItem("comanda", JSON.stringify(comanda));
+}
+
+function atualizarComanda() {
+    const lista = document.getElementById("comanda-lista");
+    const totalSpan = document.getElementById("comanda-total");
+    lista.innerHTML = "";
+
+    let total = 0;
+
+    if (comanda.length === 0) {
+        lista.innerHTML = "<li>Nenhum item na comanda.</li>";
+    } else {
+        comanda.forEach((item, i) => {
+            total += item.price;
+
+            const li = document.createElement("li");
+            li.textContent = `${item.name} - R$ ${item.price.toFixed(2)} `;
+
+            const btn = document.createElement("button");
+            btn.textContent = "Remover";
+            btn.onclick = () => {
+                comanda.splice(i, 1);
+                salvarComanda();
+                atualizarComanda();
+            };
+
+            li.appendChild(btn);
+            lista.appendChild(li);
+        });
+    }
+
+    totalSpan.textContent = total.toFixed(2);
+}
+
+function adicionarComanda(nome, preco) {
+    comanda.push({ name: nome, price: preco });
+    salvarComanda();
+    atualizarComanda();
+}
+
+function limparComanda() {
+    comanda = [];
+    salvarComanda();
+    atualizarComanda();
+}
+
+atualizarComanda();
+</script>
+
 </body>
 </html>
